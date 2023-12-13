@@ -1,8 +1,6 @@
-import pandas as pd
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_squared_error, mean_absolute_error, r2_score
 import matplotlib.pyplot as plt
-import numpy as np
 import time
 
 def linear_model(train_df, test_df):
@@ -53,23 +51,3 @@ def linear_model(train_df, test_df):
 
     return mse, mae, r_squared, training_time, plt
 
-# Example usage
-train_csv_path = 'train.csv'
-test_csv_path = 'test.csv'
-
-train_df = pd.read_csv(train_csv_path)
-test_df = pd.read_csv(test_csv_path)
-
-selected_columns = ['Flight Distance', 'Departure Delay in Minutes', 'Arrival Delay in Minutes']
-train_df = train_df[selected_columns].dropna()
-test_df = test_df[selected_columns].dropna()
-
-mse, mae, r_squared, training_time, plt = linear_model(train_df, test_df)
-print(f'\nTraining Time: {training_time:.2f} seconds')
-print(f'Mean Squared Error: {mse}')
-print(f'Mean Absolute Error: {mae}')
-print(f'R-squared: {r_squared}')
-
-plt.show()
-
-# Now you can use mse, mae, and r_squared in your further analysis or display them as needed.

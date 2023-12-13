@@ -12,6 +12,21 @@ from RandomForestRegressionModel import random_forest_regression_model
 from RidgeRegressionModel import ridge_regression_model
 from SVRegressionModel import svr_regression_model
 
+from sklearn.linear_model import BayesianRidge
+from sklearn.tree import DecisionTreeRegressor
+from sklearn.linear_model import ElasticNet
+from sklearn.neighbors import KNeighborsRegressor
+from sklearn.linear_model import Lasso
+from sklearn.linear_model import LinearRegression
+from sklearn.preprocessing import StandardScaler
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import Dense
+from sklearn.preprocessing import PolynomialFeatures
+from sklearn.ensemble import RandomForestRegressor
+from sklearn.linear_model import Ridge
+from sklearn.svm import SVR
+
+
 # Load data
 train_csv_path = 'train.csv'
 test_csv_path = 'test.csv'
